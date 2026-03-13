@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Adil AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #13131a;
+    --border: #1e1e2e;
+    --accent: #7c6af7;
+    --accent2: #f76a8a;
+    --text: #e8e8f0;
+    --muted: #6b6b85;
+    --heading-font: 'Playfair Display', serif;
+    --body-font: 'DM Sans', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--body-font);
+    font-weight: 300;
+    line-height: 1.8;
+    min-height: 100vh;
+  }
+
+  /* Background mesh */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 10% 20%, rgba(124,106,247,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 40% at 90% 80%, rgba(247,106,138,0.08) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 2rem 6rem;
+  }
+
+  /* Header */
+  header {
+    padding: 4rem 0 3rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 3rem;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .brand-dot {
+    width: 10px; height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 12px var(--accent);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  .brand-name {
+    font-family: var(--heading-font);
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  h1 {
+    font-family: var(--heading-font);
+    font-size: clamp(2.4rem, 6vw, 3.8rem);
+    font-weight: 700;
+    line-height: 1.1;
+    background: linear-gradient(135deg, var(--text) 0%, var(--muted) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1.2rem;
+  }
+
+  .meta-row {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .meta-item {
+    font-size: 0.82rem;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+
+  .meta-item span {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* TOC */
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.8rem 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .toc-title {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+
+  .toc ol {
+    list-style: none;
+    counter-reset: toc;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem 2rem;
+  }
+
+  @media (max-width: 520px) { .toc ol { grid-template-columns: 1fr; } }
+
+  .toc li {
+    counter-increment: toc;
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+  }
+
+  .toc li::before {
+    content: counter(toc, decimal-leading-zero);
+    font-size: 0.7rem;
+    color: var(--accent);
+    font-weight: 500;
+    min-width: 24px;
+  }
+
+  .toc a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+  }
+
+  .toc a:hover { color: var(--text); }
+
+  /* Sections */
+  section {
+    margin-bottom: 3rem;
+    scroll-margin-top: 2rem;
+    animation: fadeUp 0.5s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .section-number {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-family: var(--heading-font);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  p {
+    color: #a0a0b8;
+    font-size: 0.95rem;
+    margin-bottom: 0.9rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0.8rem 0 1rem;
+  }
+
+  ul li {
+    color: #a0a0b8;
+    font-size: 0.95rem;
+    padding: 0.35rem 0 0.35rem 1.5rem;
+    position: relative;
+  }
+
+  ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .highlight-box {
+    background: linear-gradient(135deg, rgba(124,106,247,0.08), rgba(247,106,138,0.06));
+    border: 1px solid rgba(124,106,247,0.2);
+    border-radius: 10px;
+    padding: 1.4rem 1.6rem;
+    margin: 1.2rem 0;
+  }
+
+  .highlight-box p {
+    margin: 0;
+    color: #c0c0d8;
+    font-size: 0.92rem;
+  }
+
+  /* Divider */
+  .divider {
+    border: none;
+    height: 1px;
+    background: var(--border);
+    margin: 3rem 0;
+  }
+
+  /* Contact */
+  .contact-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .contact-card h3 {
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .contact-card p { margin: 0; font-size: 0.88rem; }
+
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    padding: 0.7rem 1.6rem;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    transition: opacity 0.2s, transform 0.2s;
+    white-space: nowrap;
+  }
+
+  .contact-link:hover { opacity: 0.85; transform: translateY(-1px); }
+
+  /* Footer */
+  footer {
+    margin-top: 5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  footer p { font-size: 0.8rem; color: var(--muted); margin: 0; }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <header>
+    <div class="brand">
+      <div class="brand-dot"></div>
+      <span class="brand-name">Adil AI</span>
+    </div>
+    <h1>Privacy Policy</h1>
+    <div class="meta-row">
+      <div class="meta-item">Effective: <span>March 13, 2026</span></div>
+      <div class="meta-item">Last updated: <span>March 13, 2026</span></div>
+      <div class="meta-item">Version: <span>1.0</span></div>
+    </div>
+  </header>
+
+  <nav class="toc">
+    <div class="toc-title">Table of Contents</div>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#data-collected">Data We Collect</a></li>
+      <li><a href="#how-we-use">How We Use Data</a></li>
+      <li><a href="#data-sharing">Data Sharing</a></li>
+      <li><a href="#retention">Data Retention</a></li>
+      <li><a href="#your-rights">Your Rights</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <section id="overview">
+    <div class="section-number">01 — Overview</div>
+    <h2>About This Policy</h2>
+    <p>This Privacy Policy describes how <strong>Adil AI</strong> ("we", "our", or "us") collects, uses, and protects information when you interact with our Instagram messaging service powered by artificial intelligence.</p>
+    <div class="highlight-box">
+      <p>By messaging our Instagram account, you acknowledge and agree to the practices described in this Privacy Policy. We are committed to protecting your privacy and handling your data transparently.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section id="data-collected">
+    <div class="section-number">02 — Data We Collect</div>
+    <h2>Information We Collect</h2>
+    <p>When you interact with our Instagram DM service, we may collect the following information:</p>
+    <ul>
+      <li>Your Instagram username and profile information (public profile name, profile picture)</li>
+      <li>The content of messages you send to our account</li>
+      <li>Timestamps of your messages and our responses</li>
+      <li>Your Instagram User ID (assigned by Meta/Instagram)</li>
+      <li>Technical metadata associated with message delivery</li>
+    </ul>
+    <p>We do <strong>not</strong> collect passwords, payment information, or any data beyond what is shared through Instagram's messaging platform.</p>
+  </section>
+
+  <hr class="divider">
+
+  <section id="how-we-use">
+    <div class="section-number">03 — How We Use Data</div>
+    <h2>Use of Your Information</h2>
+    <p>We use the collected information solely for the following purposes:</p>
+    <ul>
+      <li>To respond to your direct messages using our AI system</li>
+      <li>To improve the quality and accuracy of automated responses</li>
+      <li>To detect and prevent abuse or misuse of the service</li>
+      <li>To comply with applicable laws and Meta's platform policies</li>
+    </ul>
+    <p>We do not use your data for advertising, profiling, or any purpose unrelated to providing direct message responses.</p>
+  </section>
+
+  <hr class="divider">
+
+  <section id="data-sharing">
+    <div class="section-number">04 — Data Sharing</div>
+    <h2>Third-Party Services</h2>
+    <p>To operate this service, your message data may be processed by the following third-party providers:</p>
+    <ul>
+      <li><strong>Meta / Instagram</strong> — the platform through which messages are received and sent</li>
+      <li><strong>Anthropic (Claude AI)</strong> — AI model used to generate responses to your messages</li>
+      <li><strong>n8n</strong> — workflow automation platform used to process and route messages</li>
+    </ul>
+    <p>Each third party operates under its own privacy policy. We do not sell your data to any parties.</p>
+  </section>
+
+  <hr class="divider">
+
+  <section id="retention">
+    <div class="section-number">05 — Data Retention</div>
+    <h2>How Long We Keep Your Data</h2>
+    <p>Message data is retained only as long as necessary to provide the service and comply with legal obligations.</p>
+    <ul>
+      <li>Active conversation data: retained for up to <strong>30 days</strong></li>
+      <li>Aggregated, anonymized usage logs: up to <strong>12 months</strong></li>
+      <li>Data subject to legal hold: as required by applicable law</li>
+    </ul>
+    <p>You may request deletion of your data at any time by contacting us (see Section 08).</p>
+  </section>
+
+  <hr class="divider">
+
+  <section id="your-rights">
+    <div class="section-number">06 — Your Rights</div>
+    <h2>Your Data Rights</h2>
+    <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Access</strong> — request a copy of data we hold about you</li>
+      <li><strong>Deletion</strong> — request that we delete your personal data</li>
+      <li><strong>Correction</strong> — request correction of inaccurate data</li>
+      <li><strong>Objection</strong> — object to certain processing of your data</li>
+      <li><strong>Portability</strong> — receive your data in a machine-readable format</li>
+    </ul>
+    <div class="highlight-box">
+      <p>To exercise any of these rights, please contact us via the details in Section 08. We will respond to all requests within 30 days.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section id="security">
+    <div class="section-number">07 — Security</div>
+    <h2>How We Protect Your Data</h2>
+    <p>We implement appropriate technical and organizational measures to protect your information against unauthorized access, alteration, disclosure, or destruction.</p>
+    <ul>
+      <li>All data is transmitted over encrypted HTTPS connections</li>
+      <li>Access to message data is restricted to authorized personnel only</li>
+      <li>We regularly review our data handling practices and security measures</li>
+    </ul>
+    <p>No method of transmission over the internet is 100% secure. While we strive to protect your data, we cannot guarantee absolute security.</p>
+  </section>
+
+  <hr class="divider">
+
+  <section id="contact">
+    <div class="section-number">08 — Contact</div>
+    <h2>Get in Touch</h2>
+    <p>If you have any questions about this Privacy Policy or wish to exercise your data rights, please contact us:</p>
+    <div class="contact-card">
+      <div>
+        <h3>Adil AI Support</h3>
+        <p style="color: var(--muted);">We respond within 2–3 business days.</p>
+      </div>
+      <a href="https://instagram.com" class="contact-link">
+        Message on Instagram
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Adil AI. All rights reserved.</p>
+    <p>This policy may be updated periodically. Continued use constitutes acceptance.</p>
+  </footer>
+
+</div>
+</body>
+</html>
