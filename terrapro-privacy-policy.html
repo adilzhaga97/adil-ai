@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — TerraPro</title>
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --surface: #1a1a1a;
+      --border: #2a2a2a;
+      --accent: #4ade80;
+      --text: #e5e5e5;
+      --muted: #888;
+      --heading: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--heading);
+      letter-spacing: -0.5px;
+    }
+
+    .logo span { color: var(--accent); }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    .hero-label {
+      display: inline-block;
+      background: rgba(74, 222, 128, 0.1);
+      color: var(--accent);
+      border: 1px solid rgba(74, 222, 128, 0.25);
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--heading);
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 48px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 56px;
+    }
+
+    .toc h3 {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .toc ol {
+      padding-left: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
+
+    .toc li a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.15s;
+    }
+
+    .toc li a:hover { color: var(--accent); }
+
+    .section {
+      margin-bottom: 56px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section:last-child { border-bottom: none; }
+
+    .section-number {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .section h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--heading);
+      margin-bottom: 16px;
+    }
+
+    .section p {
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    ul, ol {
+      padding-left: 22px;
+      color: var(--text);
+    }
+
+    li { margin-bottom: 8px; }
+
+    strong { color: var(--heading); font-weight: 600; }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    .card p {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 32px;
+      text-align: center;
+    }
+
+    .contact-box h3 {
+      color: var(--heading);
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #000;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 10px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+
+    .btn:hover { opacity: 0.85; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 560px) {
+      h1 { font-size: 26px; }
+      .toc ol { grid-template-columns: 1fr; }
+      .card-grid { grid-template-columns: 1fr; }
+      header { padding: 16px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Terra<span>Pro</span></div>
+</header>
+
+<div class="container">
+
+  <div class="hero-label">Legal</div>
+  <h1>Privacy Policy</h1>
+  <div class="meta">
+    <span>Effective: June 5, 2026</span>
+    <span>Last updated: June 5, 2026</span>
+    <span>Version: 1.0</span>
+  </div>
+
+  <div class="toc">
+    <h3>Table of Contents</h3>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#data-collected">Data We Collect</a></li>
+      <li><a href="#how-we-use">How We Use Data</a></li>
+      <li><a href="#data-sharing">Data Sharing</a></li>
+      <li><a href="#retention">Data Retention</a></li>
+      <li><a href="#your-rights">Your Rights</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <div class="section" id="overview">
+    <div class="section-number">01 — Overview</div>
+    <h2>About This Policy</h2>
+    <p>This Privacy Policy describes how <strong>TerraPro</strong> ("we", "our", or "us") collects, uses, and protects information when you interact with our Instagram messaging service powered by artificial intelligence.</p>
+    <p>By messaging our Instagram account, you acknowledge and agree to the practices described in this Privacy Policy. We are committed to protecting your privacy and handling your data transparently.</p>
+  </div>
+
+  <div class="section" id="data-collected">
+    <div class="section-number">02 — Data We Collect</div>
+    <h2>Information We Collect</h2>
+    <p>When you interact with our Instagram DM service, we may collect the following information:</p>
+    <ul>
+      <li>Your Instagram username and profile information (public profile name, profile picture)</li>
+      <li>The content of messages you send to our account</li>
+      <li>Timestamps of your messages and our responses</li>
+      <li>Your Instagram User ID (assigned by Meta/Instagram)</li>
+      <li>Technical metadata associated with message delivery</li>
+    </ul>
+    <p>We do <strong>not</strong> collect passwords, payment information, or any data beyond what is shared through Instagram's messaging platform.</p>
+  </div>
+
+  <div class="section" id="how-we-use">
+    <div class="section-number">03 — How We Use Data</div>
+    <h2>Use of Your Information</h2>
+    <p>We use the collected information solely for the following purposes:</p>
+    <ul>
+      <li>To respond to your direct messages using our AI system</li>
+      <li>To improve the quality and accuracy of automated responses</li>
+      <li>To detect and prevent abuse or misuse of the service</li>
+      <li>To comply with applicable laws and Meta's platform policies</li>
+    </ul>
+    <p>We do not use your data for advertising, profiling, or any purpose unrelated to providing direct message responses.</p>
+  </div>
+
+  <div class="section" id="data-sharing">
+    <div class="section-number">04 — Data Sharing</div>
+    <h2>Third-Party Services</h2>
+    <p>To operate this service, your message data may be processed by the following third-party providers:</p>
+    <div class="card-grid">
+      <div class="card">
+        <strong>Meta / Instagram</strong>
+        <p>Platform through which messages are received and sent</p>
+      </div>
+      <div class="card">
+        <strong>Anthropic (Claude AI)</strong>
+        <p>AI model used to generate responses to your messages</p>
+      </div>
+      <div class="card">
+        <strong>n8n</strong>
+        <p>Workflow automation platform used to process and route messages</p>
+      </div>
+    </div>
+    <p style="margin-top:16px;">Each third party operates under its own privacy policy. We do not sell your data to any parties.</p>
+  </div>
+
+  <div class="section" id="retention">
+    <div class="section-number">05 — Data Retention</div>
+    <h2>How Long We Keep Your Data</h2>
+    <p>Message data is retained only as long as necessary to provide the service and comply with legal obligations.</p>
+    <ul>
+      <li>Active conversation data: retained for up to <strong>30 days</strong></li>
+      <li>Aggregated, anonymized usage logs: up to <strong>12 months</strong></li>
+      <li>Data subject to legal hold: as required by applicable law</li>
+    </ul>
+    <p>You may request deletion of your data at any time by contacting us (see Section 08).</p>
+  </div>
+
+  <div class="section" id="your-rights">
+    <div class="section-number">06 — Your Rights</div>
+    <h2>Your Data Rights</h2>
+    <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Access</strong> — request a copy of data we hold about you</li>
+      <li><strong>Deletion</strong> — request that we delete your personal data</li>
+      <li><strong>Correction</strong> — request correction of inaccurate data</li>
+      <li><strong>Objection</strong> — object to certain processing of your data</li>
+      <li><strong>Portability</strong> — receive your data in a machine-readable format</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us via the details in Section 08. We will respond to all requests within 30 days.</p>
+  </div>
+
+  <div class="section" id="security">
+    <div class="section-number">07 — Security</div>
+    <h2>How We Protect Your Data</h2>
+    <p>We implement appropriate technical and organizational measures to protect your information against unauthorized access, alteration, disclosure, or destruction.</p>
+    <ul>
+      <li>All data is transmitted over encrypted HTTPS connections</li>
+      <li>Access to message data is restricted to authorized personnel only</li>
+      <li>We regularly review our data handling practices and security measures</li>
+    </ul>
+    <p>No method of transmission over the internet is 100% secure. While we strive to protect your data, we cannot guarantee absolute security.</p>
+  </div>
+
+  <div class="section" id="contact">
+    <div class="section-number">08 — Contact</div>
+    <h2>Get in Touch</h2>
+    <div class="contact-box">
+      <h3>TerraPro Support</h3>
+      <p>Questions about this policy or want to exercise your data rights?<br>We respond within 2–3 business days.</p>
+      <a class="btn" href="https://instagram.com" target="_blank">Message on Instagram</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 TerraPro. All rights reserved. &nbsp;·&nbsp; This policy may be updated periodically. Continued use constitutes acceptance.
+</footer>
+
+</body>
+</html>
